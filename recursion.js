@@ -34,3 +34,20 @@ console.log(rangeOfNumbers(-2,6));
 /* return [-2, -1, 0, 1, 2,
    3,  4, 5, 6] */
 /* ------------------------- */
+
+/* function for sallary counting */
+const Salary =(depart)=> { 
+  if (Array.isArray(depart)){
+    return depart.reduce((prev,current) => prev + current.salary, 0);
+  } else {
+    let sum = 0;
+    for (let subdep of Object.values(department)) {
+      sum += sumSalaries(subdep); // recursively called for subdivisions, summing the results
+    };
+    return sum; 
+  };
+};
+console.log(sumSalaries(company));
+/* return 6300 */
+/*------------------------------*/
+
