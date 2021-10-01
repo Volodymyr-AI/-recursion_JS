@@ -57,7 +57,7 @@ function factorialize(num, factorial = 1) {
     return factorial;
   } else {
     return factorialize(num - 1, factorial * num);
-  }
+  };
 }
 
 factorialize(5);
